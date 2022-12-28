@@ -1,4 +1,4 @@
-/*--------обнуняющий файл----------------------------------*/
+/*!--------Ануляція всіх стилів----------------------------------*/
 * {
     padding: 0;
     margin: 0;
@@ -88,7 +88,7 @@ h6 {
     font-weight: 400;
 }
 
-/*!-----------обнуление стилей--------------------------------------------------*/
+/*!-----------Анулювання стилів--------------------------------------------------*/
 
 .wraper {
     height: 500px;
@@ -135,8 +135,77 @@ h6 {
     font-weight: 700;
     color: #2B788B;
     letter-spacing: -0.04em;
-    padding: 14px 0 0 22px;
+    padding: 15px 0 0 22px;
 }
 .girl__img {
-    padding-top: 26px;
+    width: 100%;
+    height: 500px;
+    background: url("/img/girl.png") 109px 26px no-repeat;
+}
+
+/*?------------------mobil version------------------------------*/
+@media (max-width: 375px) {
+    .wraper {
+        overflow: hidden;
+        height: 460px;
+        width: 375px;
+        background-color: #F6F5F4;
+    }
+    .girl {
+    }
+    .girl__container {
+        padding-left: 0px;
+        display: block;
+    }
+    .girl__left-part {
+        width: 375px;
+    }
+    .girl__left-part {
+        width: 375px;
+        margin: 0 auto;
+    }
+    .left__container {
+        padding-top: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .left__container-title {
+        font-family: 'Dela Gothic One';
+        font-size: 24px;
+        letter-spacing: -0.04em;
+        color: #000000;
+        padding: 40px 0 8px 0;
+        width: 200px;
+        margin: 0 auto;
+    }
+    .left__container-text {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.04em;
+        color: #757575;
+        padding-bottom: 15px;
+        width: 325px;
+        margin: 0 auto;
+
+    }
+    .left__container-button {
+        font-family: 'Montserrat';
+        background: #C3DCE3;
+        border-radius: 100px;
+        height: 38px;
+        width: 116px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #2B788B;
+        letter-spacing: -0.04em;
+        padding: 11px 0 0 5px;
+        margin: 0 auto;
+    }
+    .girl__img {
+        margin-top: 11px;
+        height: 260px;
+        background: url("/img/mobile_girl.png") 15px 0px no-repeat;
+    }
 }

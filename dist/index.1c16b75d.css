@@ -1,0 +1,120 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+*, :before, :after {
+  moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active, a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  -ms-text-sixe-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 14px;
+  line-height: 1;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertival-aling: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wraper {
+  height: 500px;
+  width: 1920px;
+  background-color: #f6f5f4;
+}
+
+.girl__container {
+  padding-left: 471px;
+  display: flex;
+}
+
+.girl__left-part {
+  width: 489px;
+}
+
+.left__container {
+  padding-top: 135px;
+}
+
+.left__container-title {
+  letter-spacing: -.04em;
+  color: #000;
+  padding-top: 1px;
+  padding-bottom: 29px;
+  font-family: Dela Gothic One;
+  font-size: 48px;
+}
+
+.left__container-text {
+  letter-spacing: -.04em;
+  color: #757575;
+  width: 380px;
+  padding-bottom: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.left__container-button {
+  height: 45px;
+  width: 130px;
+  color: #2b788b;
+  letter-spacing: -.04em;
+  background: #c3dce3;
+  border-radius: 100px;
+  padding: 14px 0 0 22px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.girl__img {
+  padding-top: 26px;
+}
+
+/*# sourceMappingURL=index.1c16b75d.css.map */
