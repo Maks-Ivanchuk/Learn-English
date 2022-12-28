@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"47YU8":[function(require,module,exports) {
+})({"lX4BT":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -533,6 +533,6 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"4M6V8":[function(require,module,exports) {
 
-},{}]},["47YU8","4M6V8"], "4M6V8", "parcelRequire94c2")
+},{}]},["lX4BT","4M6V8"], "4M6V8", "parcelRequire94c2")
 
 //# sourceMappingURL=test1234.59712999.js.map
