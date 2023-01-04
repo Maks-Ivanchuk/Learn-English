@@ -4,9 +4,12 @@ main {
   }
 }
 
-.girl {
+.girl_bg-color-gray{
   background-color: #F6F5F4;
+}
 
+.girl{
+  background-color: #fff;
 }
 
 .container {
@@ -23,7 +26,7 @@ main {
   }
 }
 
-.girl__left {
+.girl__main {
   flex-basis: 50%;
   padding: 20px 40px 0;
   display: flex;
@@ -35,8 +38,13 @@ main {
   }
 }
 
+.girl__main-block-1{
+    @media screen and (min-width: 768px) {
+    padding: 65px;
+  }
+}
 
-.girl__left-content {
+.girl__main-content {
   display: flex;
   gap: 8px;
   flex-direction: column;
@@ -52,7 +60,7 @@ main {
   }
 }
 
-.girl__right {
+.girl__img {
   flex-basis: 50%;
   display: flex;
   align-items: flex-end;
@@ -63,4 +71,42 @@ main {
   }
 }
 
+.girl__img-block-1{
+  margin: 75px 0;
+}
 
+.main-content__botton {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    height: 145px;
+    align-items: flex-end;
+  }
+}
+.main-content__botton-left {
+  height: 110px;
+  width: 130px;
+  background-color: #F2D4DC;
+  border-radius: 14px;
+  background-image: url("/src/img/icon_shoes.svg");
+  background-repeat: no-repeat;
+  background-position:  100% 50%;
+
+  a{
+    color: #945069;
+  }
+}
+
+.main-content__botton-right {
+  height: 110px;
+  width: 170px;
+  background-color: #C3DCE3;
+  border-radius: 14px;
+  background-image: url("/src/img/icon_horn.svg");
+  background-repeat: no-repeat;
+  background-position:  100% 50%;
+}
