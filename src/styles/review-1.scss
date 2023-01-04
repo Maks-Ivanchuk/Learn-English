@@ -77,9 +77,10 @@ main {
 
 .main-content__botton {
   display: flex;
+  gap: 12px;
 
   @media screen and (min-width: 768px) {
-    gap: 10px;
+    gap: 7px;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
@@ -88,13 +89,19 @@ main {
   }
 }
 .main-content__botton-left {
+  display: flex;
+  flex-direction: column;
   height: 110px;
   width: 130px;
   background-color: #F2D4DC;
   border-radius: 14px;
-  background-image: url("/src/img/icon_shoes.svg");
-  background-repeat: no-repeat;
-  background-position:  100% 50%;
+  margin-left: 1px;
+
+    img{
+      position: relative;
+      top: -35px;
+      left: -1px;
+  }
 
   a{
     color: #945069;
@@ -102,11 +109,17 @@ main {
 }
 
 .main-content__botton-right {
+  display: flex;
+  flex-direction: column;
   height: 110px;
   width: 170px;
   background-color: #C3DCE3;
   border-radius: 14px;
-  background-image: url("/src/img/icon_horn.svg");
-  background-repeat: no-repeat;
-  background-position:  100% 50%;
+
+  img{
+    position: relative;
+    top: -35px;
+    left: 30px;
+  }
+
 }
