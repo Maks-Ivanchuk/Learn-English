@@ -1,10 +1,8 @@
 main {
-  @media screen and (max-width: 175px) {
-    width: 175px;
-  }
+  min-width: 365px;
 }
 
-.girl_bg-color-gray{
+.girl__bg-color-gray{
   background-color: #F6F5F4;
 }
 
@@ -77,47 +75,30 @@ main {
 
 .main-content__botton {
   display: flex;
-  gap: 12px;
+  gap: 35px;
+  min-height: 145px;
+  margin-top: 50px;
 
   @media screen and (min-width: 768px) {
-    gap: 7px;
+    margin-top: auto;
+    gap: 20px;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    height: 145px;
     align-items: flex-end;
   }
 }
 
+/*  ------------------ліва кнопка------------------ */
 
-
-
-
-/*
 .main-content__botton-left {
   display: flex;
   flex-direction: column;
-  height: 110px;
-  width: 130px;
-  background-color: #F2D4DC;
-  border-radius: 14px;
-  margin-left: 1px;
+  transition: 0.3s ease;
 
-    img{
-      position: relative;
-      top: -35px;
-      left: -1px;
+  &:hover {
+    filter: contrast(1.2);
   }
-
-  a{
-    color: #945069;
-  }
-}
-*/
-/**--------------------*/
-.main-content__botton-left {
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
@@ -129,53 +110,62 @@ main {
 
 .botton-left__text {
   display: flex;
-  @media screen and (min-width: 768px) {
-    height: 110px;
-    width: 130px;
-    background-color: #F2D4DC;
-    border-radius: 14px;
-    margin-left: 1px;
-    padding-bottom: 15px;
-  }
+  align-items: flex-end;
+  height: 110px;
+  width: 130px;
+  background-color: #F2D4DC;
+  border-radius: 14px;
+  margin-left: 1px;
+  padding-bottom: 15px;
+
   a{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
-    display: flex;
-    
-    align-items: flex-end;
     letter-spacing: -0.04em;
     color: #945069;
     margin: 0 auto;
   }
 }
-.botton {
-}
-/*--------------------*/
 
-
-
-
-
+/*  ------------------права кнопка------------------ */
 .main-content__botton-right {
   display: flex;
   flex-direction: column;
-  height: 110px;
-  width: 170px;
-  background-color: #C3DCE3;
-  border-radius: 14px;
+  transition: 0.3s ease;
+  position: relative;
 
-  img{
-    position: relative;
-    top: -35px;
-    left: 30px;
+  &:hover {
+    filter: contrast(1.2);
   }
 
 }
-.botton-right__img{
-  position: relative;
-  top: 10px;
-  left: 10px;
+
+.botton-right__img { /*все правильно - лефт*/
+  position: absolute;
+  top: -35px;
+  left: 35px;
 }
+
+  .botton-right__text {
+    display: flex;
+    align-items: flex-end;
+    height: 110px;
+    width: 170px;
+    background-color: #C3DCE3;
+    border-radius: 14px;
+    padding-bottom: 15px;
+    a{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      align-items: flex-end;
+      letter-spacing: -0.04em;
+      color: #2B788B;
+      margin: 0 auto;
+    }
+  }
