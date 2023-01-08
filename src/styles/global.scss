@@ -48,4 +48,34 @@ p {
   &:hover {
     filter: contrast(1.2);
   }
+
+  &.button--boots,
+  &.button--horn {
+    position: relative;
+    flex-direction: column;
+    border-radius: 14px;
+    background-color: #F2D4DC;
+    color: #945069;
+    text-align: center;
+    padding-top: 75px;
+    width: 131px;
+  
+
+    img{
+      width: 131px;
+      height: 107px;
+      position: absolute;
+      top: -35px;
+    }
+  }
+  
+  &.button--horn{
+    background-color: #c3dce3;
+    color: #2b788b;
+    width: auto;
+  
+    img{
+      width: 92px;
+    }
+  }
 }
