@@ -2,12 +2,12 @@ body {
 min-width: 335px;
 }
 
-.girl_bg-color-gray{
-  background-color: #F6F5F4;
-}
-
 .girl{
   background-color: #fff;
+}
+
+.bg-color-gray{
+  background-color: #F6F5F4;
 }
 
 .container {
@@ -87,4 +87,58 @@ min-width: 335px;
     height: 145px;
     align-items: flex-end;
   }
+}
+
+.footer {
+  min-height: 300px;
+
+  @media screen and (min-width: 768px){
+    min-height: 160px;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
+}
+
+.footer__name {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__desing {
+  display: flex;
+  justify-content: center;
 }
