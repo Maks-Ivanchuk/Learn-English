@@ -1,9 +1,15 @@
 body {
-min-width: 335px;
+min-width: 375px;
+font-family: 'Montserrat';
 }
 
 .girl{
   background-color: #fff;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }
 
 .bg-color-gray{
@@ -92,6 +98,8 @@ min-width: 335px;
 .footer {
   min-height: 300px;
 
+
+
   @media screen and (min-width: 768px){
     min-height: 160px;
   }
@@ -99,15 +107,30 @@ min-width: 335px;
   .container{
     flex-direction: column;
   }
+
+  a{
+    color: #757575;
+    font-weight: 600;
+    font-size: 14px;
+  }
 }
 
 .footer__top {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1.5px solid #E0E0E0;
+  margin: 40px 20px 20px 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px){
+    justify-content: space-between;
+    margin: 40px 0 20px 0;
+  }
 }
 .footer__nav {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 
   @media screen and (min-width: 768px){
     flex-direction: row;
@@ -117,6 +140,7 @@ min-width: 335px;
 .footer__name {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 
   @media screen and (min-width: 768px){
     flex-direction: row;
@@ -126,16 +150,24 @@ min-width: 335px;
 .footer__bottom {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px){
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  a {
+    font-size: 10px;
   }
 }
 
 .footer__social {
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
 .footer__desing {
