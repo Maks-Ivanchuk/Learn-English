@@ -118,7 +118,7 @@ font-family: 'Montserrat';
 .footer__top {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1.5px solid #E0E0E0;
+  border-bottom: 2px solid #E0E0E0;
   margin: 40px 20px 20px 20px;
   padding-bottom: 20px;
 
@@ -126,6 +126,13 @@ font-family: 'Montserrat';
     justify-content: space-between;
     margin: 40px 0 20px 0;
   }
+
+    a{
+      &:hover {
+        color: #5c5a5a;
+        font-weight: 650;
+      }
+    }
 }
 .footer__nav {
   display: flex;
@@ -158,10 +165,6 @@ font-family: 'Montserrat';
     flex-direction: row;
     justify-content: space-between;
   }
-
-  a {
-    font-size: 10px;
-  }
 }
 
 .footer__social {
@@ -170,7 +173,45 @@ font-family: 'Montserrat';
   gap: 30px;
 }
 
-.footer__desing {
+.footer__social-items { //
+  padding-top: 30px;
+  height: 0px;
+  width: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  &.footer__social-items--github{
+    background-image: url("../img/icon_github.png");
+  }
+
+  &.footer__social-items--gt{
+    background-image: url("../img/icon_GT.png");
+
+  }
+
+  &.footer__social-items--youtube{
+    background-image: url("../img/icon_YouTube.png");
+  }
+}
+
+
+.footer__copyright {
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+
+  a {
+    font-weight: 600;
+    font-size: 12px;
+    transition: 0.3s;
+    border-bottom: 1px solid #757575;
+
+    &:hover {
+      color: #5c5a5a;
+      font-weight: 650;
+    }
+  }
 }
