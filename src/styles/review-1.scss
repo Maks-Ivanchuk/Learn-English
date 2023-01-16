@@ -1,6 +1,6 @@
 body {
-min-width: 375px;
 font-family: 'Montserrat';
+width: auto;
 }
 
 .container {
@@ -21,7 +21,25 @@ font-family: 'Montserrat';
   border-bottom: 2px solid #E0E0E0;
 }
 
+.men {
+  background-color: #fff;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+
 .men__main {
+  flex-basis: 45%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 95px 0px 135px 0px;
+  }
 }
 
 .men__main-content {
@@ -41,21 +59,50 @@ font-family: 'Montserrat';
     text-transform: uppercase;
     color: #2B788B;
   }
+
+  p {
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    
+    @media screen and (min-width: 768px) {
+      max-width: 400px;
+    }
+  }
 }
 
 .main-content__info {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  column-gap: 95px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .main-content__info-item {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .men__img {
+  flex-basis: 55%;
+  display: flex;
+  align-items: flex-end;
+  align-items: center;
+  background-image: url('../img/men_with_toys.png');
+  background-position: center;
+  background-repeat: no-repeat;
+
+    img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 6%;
+    left: 56%;
+  }
 }
 
 .girl {
@@ -67,9 +114,7 @@ font-family: 'Montserrat';
   }
 }
 
-.bg-color-gray {
-  background-color: #F6F5F4;
-}
+
 
 .girl__main {
   flex-basis: 50%;
@@ -263,4 +308,8 @@ font-family: 'Montserrat';
       font-weight: 650;
     }
   }
+}
+
+.bg-color-gray {
+  background-color: #F6F5F4;
 }

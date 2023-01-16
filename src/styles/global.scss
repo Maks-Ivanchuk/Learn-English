@@ -58,8 +58,7 @@ p {
     padding-top: 75px;
     width: 131px;
 
-
-    img{
+    img {
       width: 131px;
       height: 107px;
       position: absolute;
@@ -70,19 +69,22 @@ p {
   &.button--horn{
     width: 172px;
 
-    img{
+    img {
       width: 92px;
     }
   }
 
-  &.button--color-pink{
+  &.button--color-pink {
     background-color: #F2D4DC;
     color: #945069;
   }
 
-  &.button--color-blue{
+  &.button--color-blue {
     background-color: #c3dce3;
     color: #2b788b;
   }
 }
+
+
+
 
