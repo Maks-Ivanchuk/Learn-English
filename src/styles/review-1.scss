@@ -3,19 +3,6 @@ min-width: 375px;
 font-family: 'Montserrat';
 }
 
-.girl{
-  background-color: #fff;
-  margin-bottom: 40px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0px;
-  }
-}
-
-.bg-color-gray{
-  background-color: #F6F5F4;
-}
-
 .container {
   max-width: calc(1920px - 370px * 2);
   margin-left: auto;
@@ -30,9 +17,63 @@ font-family: 'Montserrat';
   }
 }
 
+.header {
+  border-bottom: 2px solid #E0E0E0;
+}
+
+.men__main {
+}
+
+.men__main-content {
+  
+  h2 {
+    font-size: 56px;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #2B788B;
+  }
+}
+
+.main-content__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.main-content__info-item {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.men__img {
+}
+
+.girl {
+  background-color: #fff;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+
+.bg-color-gray {
+  background-color: #F6F5F4;
+}
+
 .girl__main {
   flex-basis: 50%;
-  padding: 20px 40px 0;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,6 +109,7 @@ font-family: 'Montserrat';
   flex-basis: 50%;
   display: flex;
   align-items: flex-end;
+  align-items: center;
 
   img {
     width: 100%;
@@ -75,7 +117,7 @@ font-family: 'Montserrat';
   }
 }
 
-.girl__img-block-1{
+.girl__img-block-2{
   margin: 75px 0;
 }
 
@@ -171,20 +213,28 @@ font-family: 'Montserrat';
   display: flex;
   justify-content: center;
   gap: 30px;
+
+  a {
+    font-size: 0;
+  }
 }
 
 .footer__social-items { //
-  padding-top: 30px;
-  height: 0px;
-  width: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
+  padding-top: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center; 
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    filter: contrast(1.5);
+  }
+
   &.footer__social-items--github{
     background-image: url("../img/icon_github.png");
+    
   }
 
   &.footer__social-items--gt{
@@ -196,7 +246,6 @@ font-family: 'Montserrat';
     background-image: url("../img/icon_YouTube.png");
   }
 }
-
 
 .footer__copyright {
   justify-content: center;
