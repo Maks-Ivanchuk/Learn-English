@@ -23,9 +23,11 @@ font-family: 'Montserrat';
 
 .men__main {
 }
+.men_img {
+}
 
 .men__main-content {
-  
+
   h2 {
     font-size: 56px;
     font-weight: 400;
@@ -224,7 +226,7 @@ font-family: 'Montserrat';
   padding-top: 30px;
   width: 30px;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   justify-content: center;
   align-items: center;
 
@@ -234,7 +236,7 @@ font-family: 'Montserrat';
 
   &.footer__social-items--github{
     background-image: url("../img/icon_github.png");
-    
+
   }
 
   &.footer__social-items--gt{
