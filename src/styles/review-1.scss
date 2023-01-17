@@ -15,31 +15,114 @@ width: auto;
     gap: 0;
     flex-direction: row;
   }
+
+  &.container--header {
+    justify-content: space-between;
+    border-bottom: 2px solid #E0E0E0;
+    min-height: 90px;
+    align-items: center;
+
+    /* a {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.04em;
+      color: #757575;
+    }  */
+  }
 }
 
 .header {
-  border-bottom: 2px solid #E0E0E0;
 }
 
-.bg-color-gray {
-}
-.container {
-}
 .header__navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .header__logo {
+  border-right: 2px solid #e0e0e0;
+  padding-right: 30px;
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #000000;
 }
+
 .header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.04em;
+  color: #757575;
+
+  a {
+    &:first-child { //-------------------------тут можлив А зайва------------------
+      color: #000000;
+    }
+  }
 }
+
 .header__log-in {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
 .log-in__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
 }
+
 .log-in__ava {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #2B788B;
+  background: #C3DCE3;
 }
+
 .log-in__user {
 }
+
 .log-in__authoriz {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #000000;
 }
 
 .men {
