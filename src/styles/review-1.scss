@@ -53,6 +53,11 @@ width: auto;
   line-height: 100%;
   letter-spacing: -0.02em;
   color: #000000;
+  transition: 0.3s;
+
+  &:hover {
+      color: #8d8d8d;
+  }
 }
 
 .header__nav {
@@ -60,17 +65,27 @@ width: auto;
   flex-wrap: wrap;
   gap: 30px;
   padding-left: 30px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  color: #757575;
 
   a {
-    &:first-child { //-------------------------тут можлив А зайва------------------
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.04em;
+    color: #757575;
+    transition: 0.3s;
+
+    &:first-child {
       color: #000000;
+
+      &:hover {
+        color: #8d8d8d;
+      }
+    }
+
+    &:hover {
+        color: #303030;
     }
   }
 }
@@ -97,32 +112,60 @@ width: auto;
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 140%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #2B788B;
   background: #C3DCE3;
+  transition: 0.3s;
+
+  &:hover {
+    filter: contrast(0.85);
+  }
+
+  a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #2B788B;
+  }
 }
 
 .log-in__user {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.04em;
+  color: #757575;
+  transition: 0.3s;
+
+  &:hover {
+      color: #303030;
+  }
 }
 
 .log-in__authoriz {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -0.04em;
-  color: #000000;
+  
+  a {  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: #000000;
+    transition: 0.3s;
+
+    &:hover {
+      color: #8d8d8d;
+    }
+  }
 }
 
 .men {
@@ -320,12 +363,13 @@ width: auto;
     margin: 40px 0 20px 0;
   }
 
-    a{
-      &:hover {
-        color: #5c5a5a;
-        font-weight: 650;
-      }
+  a{
+    transition: 0.3s;
+
+    &:hover {
+      color: #303030;
     }
+  }
 }
 .footer__nav {
   display: flex;
@@ -378,9 +422,10 @@ width: auto;
   background-position: center;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 
   &:hover {
-    filter: contrast(1.5);
+    filter: contrast(0.4);
   }
 
   &.footer__social-items--github{
@@ -410,8 +455,7 @@ width: auto;
     border-bottom: 1px solid #757575;
 
     &:hover {
-      color: #5c5a5a;
-      font-weight: 650;
+      color: #303030;
     }
   }
 }
