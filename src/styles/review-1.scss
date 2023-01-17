@@ -21,6 +21,27 @@ width: auto;
   border-bottom: 2px solid #E0E0E0;
 }
 
+.bg-color-gray {
+}
+.container {
+}
+.header__navigation {
+}
+.header__logo {
+}
+.header__nav {
+}
+.header__log-in {
+}
+.log-in__info {
+}
+.log-in__ava {
+}
+.log-in__user {
+}
+.log-in__authoriz {
+}
+
 .men {
   background-color: #fff;
   margin-bottom: 40px;
@@ -43,7 +64,7 @@ width: auto;
 }
 
 .men__main-content {
-  
+
   h2 {
     font-size: 56px;
     font-weight: 400;
@@ -63,7 +84,7 @@ width: auto;
   p {
     font-weight: 600;
     letter-spacing: -0.04em;
-    
+
     @media screen and (min-width: 768px) {
       max-width: 400px;
     }
@@ -94,6 +115,7 @@ width: auto;
   align-items: center;
   background-image: url('../img/men_with_toys.png');
   background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
 
     img {
@@ -102,6 +124,7 @@ width: auto;
     position: relative;
     top: 6%;
     left: 56%;
+
   }
 }
 
@@ -269,7 +292,7 @@ width: auto;
   padding-top: 30px;
   width: 30px;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   justify-content: center;
   align-items: center;
 
@@ -279,7 +302,7 @@ width: auto;
 
   &.footer__social-items--github{
     background-image: url("../img/icon_github.png");
-    
+
   }
 
   &.footer__social-items--gt{
