@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat';
   width: auto;
+  height: auto;
 }
 
 .main {
@@ -29,16 +30,18 @@ body {
 }
 
 .header {
+  //
   /*
   width: 100%;
   position: fixed;   //the first method of fixing headers + main {padding 92px}
   z-index: 1;
-*/
-
+  */
+  //
+  //
   position: sticky;
-  top: 0;
+  top: -1px;            //second method of fixing headers
   z-index: 1;
-
+  //
   border-bottom: 2px solid #E0E0E0;
 }
 
