@@ -273,7 +273,7 @@ width: auto;
   }
 }
 
-.girl__main-block-1{
+.girl__main-block-1 {
     @media screen and (min-width: 768px) {
     padding: 65px;
   }
@@ -307,7 +307,7 @@ width: auto;
   }
 }
 
-.girl__img-block-2{
+.girl__img-block-2 {
   margin: 75px 0;
 }
 
@@ -330,15 +330,15 @@ width: auto;
 .footer {
   min-height: 300px;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     min-height: 160px;
   }
 
-  .container{
+  .container {
     flex-direction: column;
   }
 
-  a{
+  a {
     color: #757575;
     font-weight: 600;
   }
@@ -359,7 +359,7 @@ width: auto;
     padding: 0 0 20px 0;
   }
 
-  a{
+  a {
     transition: 0.3s;
 
     &:hover {
@@ -372,7 +372,7 @@ width: auto;
   flex-direction: column;
   gap: 20px;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     flex-direction: row;
   }
 }
@@ -382,7 +382,7 @@ width: auto;
   flex-direction: column;
   gap: 20px;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     flex-direction: row;
   }
 }
@@ -424,17 +424,17 @@ width: auto;
     filter: contrast(0.4);
   }
 
-  &.footer__social-items--github{
+  &.footer__social-items--github {
     background-image: url("../img/icon_github.png");
 
   }
 
-  &.footer__social-items--gt{
+  &.footer__social-items--gt {
     background-image: url("../img/icon_GT.png");
 
   }
 
-  &.footer__social-items--youtube{
+  &.footer__social-items--youtube {
     background-image: url("../img/icon_YouTube.png");
   }
 }
