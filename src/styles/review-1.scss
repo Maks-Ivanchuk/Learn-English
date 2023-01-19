@@ -316,14 +316,12 @@ width: auto;
   gap: 30px;
   padding-top: 35px;
   margin-bottom: 40px;
-  flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    flex-wrap: nowrap;
     height: 145px;
     align-items: flex-end;
   }
@@ -349,16 +347,16 @@ width: auto;
 .footer__top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 2px solid #E0E0E0;
-  margin: 40px 20px 20px 20px;
-  padding-bottom: 20px;
+  margin: 40px 0 20px 0;
   font-size: 12px;
+  padding: 0 100px 20px 40px;
 
   @media screen and (min-width: 768px) {
     justify-content: space-between;
-    margin: 40px 0 20px 0;
     font-size: 14px;
+    padding: 0 0 20px 0;
   }
 
   a{
