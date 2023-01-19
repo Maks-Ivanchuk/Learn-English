@@ -66,6 +66,10 @@ width: auto;
   gap: 30px;
   padding-left: 30px;
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
   a {
     font-family: 'Montserrat';
     font-style: normal;
@@ -151,8 +155,8 @@ width: auto;
 .log-in__authoriz {
   display: flex;
   align-items: center;
-  
-  a {  
+
+  a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
