@@ -131,7 +131,7 @@ body {
   letter-spacing: -0.04em;
   color: #757575;
   transition: 0.3s;
-
+  
   &:hover,
   &:active {
     color: #303030;
@@ -139,17 +139,21 @@ body {
     .header__dropdown-item {
       z-index: 100;
       opacity: 1;
-      display: flex;
+      visibility: visible;
     }
   }
 }
 
 .header__dropdown-item {
-  display: none;
+  display: flex;
   position: absolute;
-  margin-top: 15px;
+  top: 100%;
+  left: 0;
+  visibility: collapse;
   z-index: -100;
   opacity: 0;
+  transition: 0.5s;
+  margin-top: 15px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
@@ -158,12 +162,11 @@ body {
   border-radius: 15px;
   background-color: #fff;
   color: #757575;
-  transition: 0.3s;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  
-  a {
-    &:first-child {
-      color: #757575;
+
+    a {
+      &:first-child {
+        color: #757575;
 
       &:hover {
         color: #303030;
@@ -333,7 +336,7 @@ body {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  // overflow: hidden; not working 
+  overflow: hidden;
 
     img {
     width: 100%;
