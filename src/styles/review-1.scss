@@ -36,11 +36,13 @@ body {
   justify-content: center;
   min-height: 90px;
   align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (min-width: 768px) {
     gap: 0;
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -61,11 +63,31 @@ body {
 .header__navigation {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+}
+
+.header__burger-menu {
+  display: flex;
+  height: 25px;
+  //width: 25px;
+  background-image: url("../img/Burger-lines.png");
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding-right: 57px;
+  transition: background-image 10s;
+
+  &:active {
+    background-image: url("../img/byrger-close\(x\).png");
+    transition: background-image 0s;
+  }
+  
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header__logo {
-
+  
   font-family: 'Dela Gothic One';
   font-style: normal;
   font-weight: 400;
@@ -74,11 +96,13 @@ body {
   letter-spacing: -0.02em;
   color: #000000;
   transition: 0.3s;
+  order: 2;
 
   @media screen and (min-width: 768px) {
     border-right: 2px solid #e0e0e0;
     padding-right: 30px;
     font-size: 21px;
+    order: 1;
   }
 
   &:hover {
@@ -87,13 +111,18 @@ body {
 }
 
 .header__nav {
-  display: none;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
   padding-left: 30px;
+  order: 1;
+  display: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+    order: 2;
   }
 
   a {
@@ -338,12 +367,21 @@ body {
   background-repeat: no-repeat;
   overflow: hidden;
 
-    img {
+  @media screen and (min-width: 768px) {
+    overflow: visible;
+  }
+
+  img {
     width: 100%;
     height: auto;
     position: relative;
     top: 6%;
     left: 56%;
+    opacity: 0;
+
+    @media screen and (min-width: 768px) {
+      opacity: 1;
+    }
   }
 }
 
