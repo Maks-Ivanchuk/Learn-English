@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-wrap: wrap;
+
 
   @media screen and (min-width: 768px) {
     gap: 0;
@@ -33,7 +33,7 @@ body {
   padding-right: 20px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 0px;
   justify-content: center;
   min-height: 90px;
   align-items: center;
@@ -42,9 +42,13 @@ body {
   padding-right: 20px;
 
   @media screen and (min-width: 768px) {
-    gap: 0;
+    //gap: 0;---------------------------------------------------
     flex-direction: row;
   }
+}
+
+.icon-v {
+  padding-top: 3px;
 }
 
 .header {
@@ -63,18 +67,22 @@ body {
 
 .header__navigation {
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
+  flex-basis: 33.3%;
+  justify-content: center;
 }
 
 .header__burger-menu {
   display: flex;
   height: 25px;
-  //width: 25px;
+  min-width: 33.3%;
   background-image: url("../img/Burger-lines.png");
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  padding-right: 57px;
+  //display: flex;----------------------------------------------------------
+  //padding-right: 57px;
+  flex-basis: 33.3%;
   transition: background-image 10s;
 
   &:active {
@@ -168,10 +176,6 @@ body {
   &:active {
     color: #303030;
 
-    img {
-    padding-top: 3px;
-    }
-
     .header__dropdown-item {
       z-index: 100;
       opacity: 1;
@@ -212,36 +216,41 @@ body {
 }
 
 .header__log-in {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   gap: 30px;
+  display: flex;
+  flex-basis: 33.3%;
+  justify-content: flex-end;
 }
 
 .log-in__info {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  flex-direction: row;
-  gap: 10px;
+  gap: 4px;
+  display: flex;
+  flex-basis: 33%;
 
   @media screen and (min-width: 768px) {
+    gap: 10px;
 
-      img {
-        display: none;
-      }
+    img {
+      display: none;
     }
+  }
 }
 
 .log-in__ava {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   background: #C3DCE3;
   transition: 0.3s;
+
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 
   &:hover {
     filter: contrast(0.85);
@@ -251,13 +260,19 @@ body {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 140%;
-    display: flex;
-    align-items: center;
+    //display: flex;=====================================
+    //align-items: center;==================================
     text-align: center;
     letter-spacing: -0.04em;
     color: #2B788B;
+
+    @media screen and (min-width: 768px) {
+      a {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -265,11 +280,15 @@ body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 140%;
   letter-spacing: -0.04em;
   color: #757575;
   transition: 0.3s;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 
   &:hover {
       color: #303030;
@@ -495,7 +514,6 @@ body {
 
 .footer__top {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 2px solid #E0E0E0;
   margin: 40px 0 20px 0;
