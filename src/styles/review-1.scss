@@ -226,12 +226,11 @@ body {
   gap: 10px;
 
   @media screen and (min-width: 768px) {
-    .log-in__info {
+
       img {
         display: none;
       }
     }
-  }
 }
 
 .log-in__ava {
