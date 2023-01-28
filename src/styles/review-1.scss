@@ -48,8 +48,9 @@ body {
 }
 
 .icon-v {
-  padding-top: 3px;
-  height: 7px;
+  height: 5px;
+  position: relative;
+  top: 1px;
 }
 
 .header {
@@ -173,7 +174,7 @@ body {
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
 
   &:hover,
   &:focus,
