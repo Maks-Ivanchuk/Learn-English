@@ -77,9 +77,8 @@ body {
 }
 
 .header__burger-menu {
-  display: flex;
   height: 25px;
-  min-width: 33.3%;
+  width: 33.3%;
   background-image: url("../img/Burger-lines.png");
   background-repeat: no-repeat;
   background-color: #F6F5F4;
@@ -97,10 +96,27 @@ body {
     & + .header__navigation {
       .header__nav {
         display: flex;
+        position: absolute;
+        overflow: hidden;
+        height: calc(100vh - 90px);
+        width: 100%;
+        background-color: #F4F4F2;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 90px;
+      }
 
+      .header__dropdown {
+        z-index: 100;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        position: absolute;
+        overflow: hidden;
       }
     }
-  }
+  } //----------------------------------------------------------------------------
 
   @media screen and (min-width: 768px) {
     display: none;
