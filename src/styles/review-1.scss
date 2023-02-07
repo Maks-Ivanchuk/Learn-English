@@ -106,17 +106,19 @@ body {
         left: 0;
         top: 90px;
       }
+    }
 
+    & + .header__nav {
       .header__dropdown {
-        z-index: 100;
-        opacity: 1;
-        visibility: visible;
-        display: flex;
-        position: absolute;
-        overflow: hidden;
+        display: none;
+      }
+
+      .header__nav-item--invisible {
+        display: inline-flex;
       }
     }
-  } //----------------------------------------------------------------------------
+  }
+ //----------------------------------------------------------------------------
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -124,7 +126,6 @@ body {
 }
 
 .header__logo {
-
   font-family: 'Dela Gothic One';
   font-style: normal;
   font-weight: 400;
@@ -184,7 +185,13 @@ body {
       }
     }
   }
+
+  .header__nav-item--invisible {
+    display: none;
+  }
 }
+
+
 
 .header__dropdown {
   position: relative;
@@ -609,7 +616,7 @@ body {
   }
 }
 
-.footer__social-items { //
+.footer__social-items {
   display: flex;
   padding-top: 30px;
   width: 30px;
