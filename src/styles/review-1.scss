@@ -86,9 +86,16 @@ body {
   flex-basis: 33.3%;
   transition: background-image 10s;
 
-  &:active {
+  &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
+
+    & + .header__navigation {
+      .header__nav {
+        display: flex;
+
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -501,6 +508,7 @@ body {
 
 .footer {
   min-height: 300px;
+  ;
 
   @media screen and (min-width: 768px) {
     min-height: 160px;
