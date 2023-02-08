@@ -1,11 +1,14 @@
 body {
   font-family: 'Montserrat';
   width: auto;
-  height: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-  //padding-top: 92px;  //the first method of fixing headers + main {padding 92px}
+  padding-top: 92px;  //the first method of fixing headers + main {padding 92px}
+  flex: 1 1 auto;
 }
 
 .container {
@@ -54,15 +57,16 @@ body {
 }
 
 .header {
-/*
+
   width: 100%;
   position: fixed;   //the first method of fixing headers + main {padding 92px}
-  z-index: 1;
-*/
+  z-index: 50;
 
+/*
   position: sticky;
   top: -1px;            //second method of fixing headers
   z-index: 50;
+  */
   border-bottom: 2px solid #E0E0E0;
 }
 
@@ -74,9 +78,8 @@ body {
 }
 
 .header__burger-menu {
-  display: flex;
   height: 25px;
-  min-width: 33.3%;
+  width: 33.3%;
   background-image: url("../img/Burger-lines.png");
   background-repeat: no-repeat;
   background-color: #F6F5F4;
@@ -85,12 +88,19 @@ body {
   //display: flex;----------------------------------------------------------
   //padding-right: 57px;
   flex-basis: 33.3%;
-  transition: background-image 10s;
+  transition: background-image 1s;
 
+<<<<<<< HEAD
   &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
   
+=======
+  &:focus {
+    background-image: url("../img/byrger-close\(x\).png");
+    transition: background-image 0s;
+
+>>>>>>> ce0c84a814cc686922a830b3e8590d5bc65673b0
     & + .header__navigation {
       .header__nav {
         display: flex;
@@ -106,6 +116,7 @@ body {
       }
     }
   }
+ //----------------------------------------------------------------------------
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -113,7 +124,6 @@ body {
 }
 
 .header__logo {
-
   font-family: 'Dela Gothic One';
   font-style: normal;
   font-weight: 400;
@@ -178,6 +188,14 @@ body {
   }
 }
 
+.header__nav-item--invisible {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .header__dropdown {
   position: relative;
   pointer-events: all;
@@ -204,6 +222,10 @@ body {
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -520,6 +542,7 @@ body {
 
 .footer {
   min-height: 300px;
+  ;
 
   @media screen and (min-width: 768px) {
     min-height: 160px;
@@ -600,7 +623,7 @@ body {
   }
 }
 
-.footer__social-items { //
+.footer__social-items {
   display: flex;
   padding-top: 30px;
   width: 30px;
