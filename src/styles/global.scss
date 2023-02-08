@@ -83,6 +83,19 @@ p {
     background-color: #c3dce3;
     color: #2b788b;
   }
+
+
+  &.button--mini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+  }
 }
 
 
