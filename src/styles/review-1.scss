@@ -87,9 +87,10 @@ body {
   //display: flex;----------------------------------------------------------
   //padding-right: 57px;
   flex-basis: 33.3%;
-  transition: background-image 10s;
+  transition: background-image 1s;
 
-  &:focus {
+  &:focus,
+  &:active {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
 
@@ -105,16 +106,6 @@ body {
         align-items: center;
         left: 0;
         top: 90px;
-      }
-    }
-
-    & + .header__nav {
-      .header__dropdown {
-        display: none;
-      }
-
-      .header__nav-item--invisible {
-        display: inline-flex;
       }
     }
   }
@@ -185,13 +176,15 @@ body {
       }
     }
   }
+}
 
-  .header__nav-item--invisible {
+.header__nav-item--invisible {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
-
-
 
 .header__dropdown {
   position: relative;
@@ -219,6 +212,10 @@ body {
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 
