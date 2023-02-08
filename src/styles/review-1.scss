@@ -87,9 +87,24 @@ body {
   flex-basis: 33.3%;
   transition: background-image 10s;
 
-  &:active {
+  &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
+  
+    & + .header__navigation {
+      .header__nav {
+        display: flex;
+        position: absolute;
+        overflow: hidden;
+        height: calc(100vh - 90px);
+        width: 100%;
+        background-color: #F4F4F2;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 90px;
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
