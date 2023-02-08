@@ -90,17 +90,11 @@ body {
   flex-basis: 33.3%;
   transition: background-image 1s;
 
-<<<<<<< HEAD
-  &:focus {
-    background-image: url("../img/byrger-close\(x\).png");
-    transition: background-image 0s;
   
-=======
   &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
 
->>>>>>> ce0c84a814cc686922a830b3e8590d5bc65673b0
     & + .header__navigation {
       .header__nav {
         display: flex;
@@ -211,6 +205,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  display: none;
 
   &:hover,
   &:focus,
@@ -224,8 +219,8 @@ body {
     }
   }
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
