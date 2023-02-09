@@ -50,6 +50,37 @@ body {
   }
 }
 
+.container__small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+  border-radius: 14px;
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  .girl__img {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .girl__icon-mobile-version {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 .icon-v {
   height: 5px;
   position: relative;
@@ -90,7 +121,7 @@ body {
   flex-basis: 33.3%;
   transition: background-image 1s;
 
-  
+
   &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
@@ -270,7 +301,7 @@ body {
 
   @media screen and (min-width: 768px) {
     gap: 10px;
-    
+
     img {
       display: none;
     }
@@ -536,8 +567,7 @@ body {
 }
 
 .footer {
-  min-height: 300px;
-  ;
+  //min-height: 300px;
 
   @media screen and (min-width: 768px) {
     min-height: 160px;
@@ -545,6 +575,7 @@ body {
 
   .container {
     flex-direction: column;
+    gap: 0;
   }
 
   a {
@@ -600,7 +631,6 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 20px;
-  margin-bottom: 40px;
 
   @media screen and (min-width: 768px){
     flex-direction: row;
@@ -651,9 +681,13 @@ body {
   justify-content: center;
   font-size: 10px;
   font-weight: 600;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     font-size: 12px;
+    padding-bottom: 0px;
+    display: inline-flex;
+    align-items: flex-end;
   }
 
   a {
