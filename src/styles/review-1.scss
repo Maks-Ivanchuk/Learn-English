@@ -50,7 +50,7 @@ body {
   }
 }
 
-.container__small {
+.container__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -631,6 +631,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 20px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 768px){
     flex-direction: row;
@@ -681,11 +682,9 @@ body {
   justify-content: center;
   font-size: 10px;
   font-weight: 600;
-  padding-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     font-size: 12px;
-    padding-bottom: 0px;
     display: inline-flex;
     align-items: flex-end;
   }
