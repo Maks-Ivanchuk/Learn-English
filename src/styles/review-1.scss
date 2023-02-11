@@ -33,15 +33,17 @@ body {
   }
 
   &.container--wrapper {
+    max-width: calc(1920px - 565px * 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    gap: 12px;
-    box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+    margin: 0 20px;
+    //gap: 12px;
     border-radius: 14px;
     background-color: #FFFFFF;
+    box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
@@ -69,13 +71,7 @@ body {
   }
 }
 
-.girl__img {
-  display: none;
 
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-}
 
 
 .icon-v {
@@ -168,7 +164,6 @@ body {
 }
 
 .header__nav {
-  display: flex;
   flex-direction: column;
   gap: 30px;
   padding-left: 30px;
@@ -181,14 +176,6 @@ body {
     align-items: center;
     padding-left: 30px;
     order: 2;
-  }
-
-  &.header__nav--invisible {
-    display: flex;
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
   }
 
   a {
@@ -214,6 +201,14 @@ body {
     }
   }
 }
+
+  .header__nav-invisible {
+    display: flex;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 
 .header__dropdown {
   position: relative;
@@ -506,21 +501,19 @@ body {
     padding: 100px;
   }
   &.girl__main--mini {
-    flex-basis: 65%;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-basis: 60%;
     gap: 20px;
+    padding: 0;
 
     @media screen and (min-width: 768px) {
-      padding: 100px;
+      align-items: flex-start;
     }
   }
 }
-
-
 
 .girl__main-block-1 {
     @media screen and (min-width: 768px) {
@@ -551,9 +544,9 @@ body {
   display: flex;
   background-color: #F2D4DC;
   background-image: url("../img/icon_shoes.png");
-    background-position: 2px 12px;
-    background-repeat: no-repeat;
-    background-size: auto 45px;
+  background-position: 2px 12px;
+  background-repeat: no-repeat;
+  background-size: auto 45px;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -572,7 +565,12 @@ body {
   }
 
   &.girl__img--mini {
-      flex-basis: 25%;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-basis: 33%;
+    }
   }
 }
 
@@ -588,14 +586,24 @@ body {
   align-items: center;
   gap: 8px;
 
+  @media screen and (min-width: 768px) { 
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
   & > p {
+    display: inline-flex;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
-    text-align: center;
     letter-spacing: -0.04em;
     color: #757575;
+
+    @media screen and (min-width: 768px) { 
+      font-size: 16px;
+      text-align: start;
+    }
   }
 }
 
@@ -646,8 +654,14 @@ body {
 .choose-level__container {
   width: 100%;
   display: flex;
-  gap: 25px;
-  justify-content: space-between;
+  gap: 6px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 25px;
+    justify-content: flex-start;
+  }
+
 }
 
 .choose-level__button {
@@ -729,13 +743,12 @@ body {
     color: #5996A5;
     transition: 0.3s;
 
-    &:hover{
+    &:hover {
       background-color: rgba(89, 150, 165, 0.3);
       transition: 0.3s;
-    }
+    }  
   }
 }
-
 
 .main-content__botton {
   display: flex;
