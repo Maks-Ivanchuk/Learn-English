@@ -33,7 +33,7 @@ p {
   align-items: center;
   justify-content: center;
   font-family: 'Montserrat';
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -48,4 +48,60 @@ p {
   &:hover {
     filter: contrast(1.2);
   }
+
+  &.button--boots,
+  &.button--horn {
+    position: relative;
+    flex-direction: column;
+    border-radius: 14px;
+    text-align: center;
+    padding-top: 75px;
+    width: 131px;
+
+    img {
+      width: 131px;
+      height: 107px;
+      position: absolute;
+      top: -35px;
+    }
+  }
+
+  &.button--horn{
+    width: 172px;
+
+    img {
+      width: 92px;
+    }
+  }
+
+  &.button--color-pink {
+    background-color: #F2D4DC;
+    color: #945069;
+  }
+
+  &.button--color-blue {
+    background-color: #c3dce3;
+    color: #2b788b;
+  }
+
+  &.button--cyan-dark {
+    background-color: #2B788B;
+    color: #FFFFFF;
+  }
+
+  &.button--mini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+  }
 }
+
+
+
+
