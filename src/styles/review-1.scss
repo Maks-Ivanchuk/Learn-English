@@ -10,7 +10,7 @@ body {
 .main {
   padding-top: 92px;  //the first method of fixing headers + main {padding 92px}
   flex: 1 1 auto;
-  
+
   &.main--container-center {
     display: flex;
     justify-content: center;
@@ -330,9 +330,7 @@ body {
     color: #2B788B;
 
     @media screen and (min-width: 768px) {
-      a {
-        font-size: 16px;
-      }
+      font-size: 16px;
     }
   }
 }
@@ -501,6 +499,7 @@ body {
   @media screen and (min-width: 768px) {
     padding: 100px;
   }
+
   &.girl__main--mini {
     display: flex;
     align-items: center;
@@ -512,6 +511,7 @@ body {
 
     @media screen and (min-width: 768px) {
       align-items: flex-start;
+      gap: 30px;
     }
   }
 }
@@ -587,7 +587,7 @@ body {
   align-items: center;
   gap: 8px;
 
-  @media screen and (min-width: 768px) { 
+  @media screen and (min-width: 768px) {
     justify-content: flex-start;
     gap: 14px;
   }
@@ -601,7 +601,7 @@ body {
     letter-spacing: -0.04em;
     color: #757575;
 
-    @media screen and (min-width: 768px) { 
+    @media screen and (min-width: 768px) {
       font-size: 16px;
       text-align: start;
     }
@@ -677,12 +677,14 @@ body {
   font-size: 16px;
   line-height: 100%;
   border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  transition: 0.3s;
+  background-color: #FFFFFF;
 
   &.choose-level__button--green {
-    border: 3px solid #639B6D;
-    background-color: #FFFFFF;
+    border-color: #639B6D;
     color: #639B6D;
-    transition: 0.3s;
 
     &:hover{
       background-color: rgba(99, 155, 109, 0.3);
@@ -691,63 +693,86 @@ body {
   }
 
   &.choose-level__button--yellow {
-    border: 3px solid #C4A24C;
-    background-color: #FFFFFF;
+    border-color: #C4A24C;
     color: #C4A24C;
-    transition: 0.3s;
 
     &:hover{
       background-color: rgba(196, 162, 76, 0.3);
-      transition: 0.3s;
     }
   }
-  
+
   &.choose-level__button--orange {
-    border: 3px solid #CB5B43;
-    background-color: #FFFFFF;
+    border-color: #CB5B43;
     color: #CB5B43;
-    transition: 0.3s;
 
     &:hover{
       background-color: rgba(203, 91, 67, 0.3);
-      transition: 0.3s;
     }
   }
-  
+
   &.choose-level__button--red {
-    border: 3px solid #A95151;
-    background-color: #FFFFFF;
+    border-color: #A95151;
     color: #A95151;
-    transition: 0.3s;
 
     &:hover{
       background-color: rgba(169, 81, 81, 0.3);
-      transition: 0.3s;
     }
   }
-  
+
   &.choose-level__button--pink {
-    border: 3px solid #A15993;
-    background-color: #FFFFFF;
+    border-color: #A15993;
     color: #A15993;
-    transition: 0.3s;
 
     &:hover{
       background-color: rgba(161, 89, 147, 0.3);
-      transition: 0.3s;
     }
   }
-  
+
   &.choose-level__button--cyan {
-    border: 3px solid #5996A5;
-    background-color: #FFFFFF;
+    border-color: #5996A5;
     color: #5996A5;
-    transition: 0.3s;
 
     &:hover {
       background-color: rgba(89, 150, 165, 0.3);
-      transition: 0.3s;
-    }  
+    }
+  }
+}
+
+input[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -9999;
+
+  &:checked + .choose-level__button--green {
+    background-color: #639B6D;
+    color: #FFFFFF;
+  }
+
+  &:checked + .choose-level__button--yellow {
+    background-color: #C4A24C;
+    color: #FFFFFF;
+  }
+
+  &:checked + .choose-level__button--orange {
+    background-color: #CB5B43;
+    color: #FFFFFF;
+  }
+
+  &:checked + .choose-level__button--red {
+    background-color: #A95151;
+    color: #FFFFFF;
+  }
+
+  &:checked + .choose-level__button--pink {
+    background-color: #A15993;
+    color: #FFFFFF;
+  }
+
+  &:checked + .choose-level__button--cyan {
+    background-color: #5996A5;
+    color: #FFFFFF;
   }
 }
 
@@ -902,3 +927,4 @@ body {
 .bg-color-gray {
   background-color: #F6F5F4;
 }
+

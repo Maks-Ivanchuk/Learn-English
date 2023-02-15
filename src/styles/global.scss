@@ -87,6 +87,10 @@ p {
   &.button--cyan-dark {
     background-color: #2B788B;
     color: #FFFFFF;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &.button--mini {
