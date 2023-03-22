@@ -72,9 +72,6 @@ body {
   }
 }
 
-
-
-
 .icon-v {
   height: 5px;
   position: relative;
@@ -105,21 +102,21 @@ body {
 .header__burger-menu {
   height: 25px;
   width: 33.3%;
-  background-image: url("../img/Burger-lines.png");
-  background-repeat: no-repeat;
-  background-color: #F6F5F4;
-  justify-content: center;
-  align-items: center;
+  // background-image: url("../img/Burger-lines.png");
+  // background-repeat: no-repeat;
+  // background-color: #F6F5F4;
+  // justify-content: center;
+  // align-items: center;
   //display: flex;----------------------------------------------------------
   //padding-right: 57px;
   flex-basis: 33.3%;
-  transition: background-image 1s;
+  // transition: background-image 1s;
 
-
+  /*----
   &:focus {
     background-image: url("../img/byrger-close\(x\).png");
     transition: background-image 0s;
-    /*----
+    
     & + .header__navigation {
       .header__nav {
         display: flex;
@@ -134,17 +131,41 @@ body {
         top: 90px;
       }
     }
-    --------*/
+    
   }
-
+  -------*/
   //----------------------------------------------------------------------------
-
+  
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
  //----------------------------------------------------------------------------
+.header__button {
+  padding: 5px 2px;
+  width: 25px;
+  background-color: #F6F5F4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4px;
 
+  span {
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: black;
+
+    &:first-child {
+      width: 85%;
+    }
+
+    &:last-child {
+      width: 25%;
+    }
+  }
+}
  //----------------------------------------------------------------------------
 
 .header__logo {
