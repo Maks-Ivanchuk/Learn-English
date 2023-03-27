@@ -14,8 +14,7 @@ function burgerMenu() {
       document.querySelector('.header__nav').classList.toggle('header__nav--open-burger');
 
       document.querySelector('.header__burger-menu').classList.toggle('header__burger-menu--activate-burger-button')
-
-      document.querySelector('.header__button span').classList.toggle('.span-active')
    });
 }
+
 burgerMenu()
