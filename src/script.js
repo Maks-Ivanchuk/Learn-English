@@ -1,28 +1,22 @@
+const body = document.body;
+const burgerButton = document.querySelector('.header__burger-menu');
+const wrapperBurgerButton = document.querySelector('.header__wrapper-burger-menu');
+const headerNavigation = document.querySelector('.header__nav');
 
-/* ------------- var 1 -------------
+/*----------- var 3 ------ хуй зна шо роблю-------*/
 
-function burgerMenu() {
-   document.querySelector('.header__burger-button').addEventListener("click", function () {
-      document.querySelector('.header__nav').classList.toggle('header__nav--open-burger-menu');
-
-      document.querySelector('.header__burger-menu').classList.toggle('header__burger-menu--activate-burger-button')
-   });
-}
-
-burgerMenu();
----------------------------------- */
-
-/* ------------- var 2 -------------*/
-let bugregButton = document.querySelector('.header__burger-button');
-let bugregMenu = document.querySelector('.header__burger-menu');
-let headerNavigation = document.querySelector('.header__nav');
-
-document.addEventListener("DOMContentLoaded", burgerMenu());
-
-function burgerMenu() {
-   bugregButton.addEventListener("click", function () {
+function openBurgerMenu() {
+   burgerButton.addEventListener('click', function () {
       headerNavigation.classList.toggle('header__nav--open-burger-menu');
-
-      bugregMenu.classList.toggle('header__burger-menu--activate-burger-button');
+      body.classList.toggle('lock');
    });
-}
+   
+   headerNavigation.addEventListener('click', function (event) {
+      event.target.parentElement.classList.remove('header__nav--open-burger-menu');
+      body.classList.remove('lock');
+   });
+};
+
+document.addEventListener("DOMContentLoaded", openBurgerMenu());
+
+/*-----------end var 3 ------ хуй зна шо наробив-------*/

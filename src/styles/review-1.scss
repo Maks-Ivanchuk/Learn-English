@@ -99,9 +99,13 @@ body {
   justify-content: center;
 }
 
-.header__burger-menu {
+.header__wrapper-burger-menu {
   height: 25px;
   flex-basis: 33.3%;
+
+    @media screen and (min-width: 768px) {
+    display: none;
+  }
   // background-image: url("../img/Burger-lines.png");
   // background-repeat: no-repeat;
   // background-color: #F6F5F4;
@@ -133,32 +137,22 @@ body {
 
   }
   -------*/
-
-  //----------------------------------------------------------------------------
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
-  &.header__burger-menu--activate-burger-button {
-    display: block;
-  }
 }
 
  //----------------------------------------------------------------------------
-.header__burger-button {
-  padding: 5px 2px;
-  width: 25px;
-  background-color: #F6F5F4;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 4px;
+.header__burger-menu {
+    padding: 5px 2px;
+    width: 25px;
+    background-color: #F6F5F4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 4px;
 
-  // &.header__burger-menu--activate-burger-button {
-  //   display: block;
-  // } --тут треба спробувати додати цьому класу БЛОК, щоб на веливому розширенні кнопки не пропадали
+    @media screen and (min-width: 768px) {
+    display: none;
+  }
 
   span {
     display: block;
@@ -218,23 +212,6 @@ body {
     order: 2;
   }
 
-  &.header__nav--open-burger-menu {
-    display: flex;
-    position: absolute;
-    overflow: hidden;
-    height: calc(100vh - 90px);
-    width: 100%;
-    background-color: #F4F4F2;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 90px;
-
-    // @media screen and (min-width: 768px) {
-    //   display: none;
-    // }
-  }
-
   a {
     font-family: 'Montserrat';
     font-style: normal;
@@ -257,15 +234,30 @@ body {
       }
     }
   }
-}
 
-  .header__nav-invisible {
-    display: flex;
-
-    @media screen and (min-width: 768px) {
-      display: none;
+  &.header__nav--open-burger-menu {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      position: absolute;
+      overflow: hidden;
+      height: calc(100vh - 90px);
+      width: 100%;
+      background-color: #F4F4F2;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 92px;
     }
   }
+}
+
+.header__nav-invisible {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
 
 .header__dropdown {
   position: relative;
