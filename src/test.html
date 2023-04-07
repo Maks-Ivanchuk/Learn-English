@@ -10,7 +10,7 @@
    <link
       href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
-   <title>Global Talk</title>
+   <title>Drop Ul list</title>
    <style>
       #tree {
          cursor: pointer;
@@ -25,9 +25,9 @@
 
 <body>
    <ul id="tree">
-      <li>Тварини
+      <li class="targetForBtnClose">Тварини
          <button>#</button>
-         <ul class="targetForBtnClose">
+         <ul>
             <li>Ссавці
                <ul>
                   <li>Корови
@@ -64,8 +64,9 @@
                <ul>
                   <li>Змії
                      <ul>
-                        <li>жінки-колеги</li>
-                        <button>x</button>
+                        <li>жінки-колеги
+                           <button>x</button>
+                        </li>
                      </ul>
                   </li>
                   <li>Птахи
@@ -86,9 +87,9 @@
             </li>
          </ul>
       </li>
-      <li>Риби
+      <li class="targetForBtnClose">Риби
          <button>#</button>
-         <ul class="targetForBtnClose">
+         <ul>
             <li>Акваріумні
                <ul>
                   <li>Гуппі
@@ -117,6 +118,19 @@
                      </ul>
                   </li>
                </ul>
+            </li>
+         </ul>
+      </li>
+      <li class="targetForBtnClose">Люди
+         <button>#</button>
+         <ul>
+            <li>
+               Нормальні
+               <button>x</button>
+            </li>
+            <li>
+               Чорні
+               <button>x</button>
             </li>
          </ul>
       </li>
