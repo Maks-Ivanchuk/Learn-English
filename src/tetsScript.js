@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       /*---------------------------------------------------------*/
       function closeButton() {
          if (target.tagName == 'BUTTON' && !childContainer) {
-            let closeAll = target.closest('.targetForBtnClose');
             if (!closeAll) return;
             closeAll.hidden = !closeAll.hiden;
          };
