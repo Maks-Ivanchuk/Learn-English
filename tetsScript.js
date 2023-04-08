@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
       /*---------------------------------------------------------------------------------------------------*/
       function firstButtonStepHidden() {
          if (target.tagName == 'BUTTON' && childContainer) {//шукаємо батю а в ньому Ул
-            if (childContainer.hidden) {
+            if (childContainer.hidden == true) {
                childContainer.hidden = !childContainer.hidden;
-            } else if (!childContainer.hidden) {//другий рівень вкладеності
+            } else if (childContainer.hidden == false) {//другий рівень вкладеності
                let nextChildContainer = childContainer.children; //дізнаємось скільки дітей в ul
                let numChildren = nextChildContainer.length;
 
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                   if (ulInChildren.hidden) {
                      ulInChildren.hidden = !ulInChildren.hidden;
+                     ulInChildren.style.color = "red";
                   } else {
                      return;
                   }
@@ -46,34 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
             };
          };
       };
-      /*-------------------------це дрочь яка--------------------------------*/
-      // function visibleChildrenContainer() {
-      //    let nextChildContainer = childContainer.children; //дізнаємось скільки дітей в ul
-      //    let numChildren = nextChildContainer.length;
-            
-      //       for (let i = 0; i < numChildren; i++) {  //перебрали всі   ul  li
-      //          let childrenHidden = nextChildContainer[i].querySelector('ul');
-      //          !childrenHidden.hidden;
-      //          childrenHidden.style.color = "red";
-      //       }
-      // };   
-         /*---------------------------------------------------------*/
-      
-      
-         function endButtonHiddenAll() {
+      /*---------------------------------------------------------*/
+      function endButtonHiddenAll() {
+         if (target.tagName == 'BUTTON' && !childContainer) {
             let childAllChildCont = target.closest('.targetForBtnClose').children;
-
-            if (target.tagName == 'BUTTON' && !childContainer) {
-               for (let i = 0; i < childAllChildCont.length; i++) {
-                  if (childAllChildCont[i].tagName == "UL") { 
-                     childAllChildCont[i].hidden = !childAllChildCont[i].hidden;
-                  };
+            
+            for (let i = 0; i < childAllChildCont.length; i++) {
+               if (childAllChildCont[i].tagName == "UL") { 
+                  childAllChildCont[i].hidden = !childAllChildCont[i].hidden;
                };
             };
          };
-         /*---------------------------------------------------------*/
-         dropDownMenuList();
-         firstButtonStepHidden();
-         endButtonHiddenAll();
-      });
+      };
+      /*---------------------------------------------------------*/
+      dropDownMenuList();
+      firstButtonStepHidden();
+      endButtonHiddenAll();
+   });
 });
