@@ -12,30 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
    };
 
    addSpan();
-   /*-----------------------------------------------------------------------------------*/
+   /*-------------------------------------------------------------------------------------------------------*/
 
    tree.addEventListener('click', (event) => {
       let target = event.target;
       let childContainer = target.parentNode.querySelector('ul');
-      let closeAll = target.closest('.targetForBtnClose').querySelector('ul');
+      
       /*---------------------------------------------------------*/
       function dropDownMenuList() {
          if (target.tagName == 'SPAN' && childContainer) {
             childContainer.hidden = !childContainer.hidden;
          };
       };
-      /*---------------------------------------------------------*/
+      /*---------------------------------------------------------------------------------------------------*/
       function firstButtonStepHidden() {
          if (target.tagName == 'BUTTON' && childContainer) {//шукаємо батю а в ньому Ул
             if (childContainer.hidden) {
                childContainer.hidden = !childContainer.hidden;
-               console.log(childContainer);
             } else if (!childContainer.hidden) {//другий рівень вкладеності
-               let nextchildContainer = childContainer.children; //дізнаємось скільки дітей в ul
-               let numChildren = nextchildContainer.length;
+               let nextChildContainer = childContainer.children; //дізнаємось скільки дітей в ul
+               let numChildren = nextChildContainer.length;
 
                for (let i = 0; i < numChildren; i++) {  //перебрали всі   ul  li
-                  let ulInChildren = nextchildContainer[i].querySelector('ul');
+                  let ulInChildren = nextChildContainer[i].querySelector('ul');
 
                   if (ulInChildren.hidden) {
                      ulInChildren.hidden = !ulInChildren.hidden;
@@ -47,30 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
             };
          };
       };
-      /*---------------------------------------------------------*/
-      function sortChildrenContainer() {
-         let nextchildContainer = childContainer.children; //дізнаємось скільки дітей в ul
-         let numChildren = nextchildContainer.length;
-
-         if (childContainer.hidden) {//другий рівень вкладеності
-            childContainer.hidden = !childContainer.hidden;
-            if ()
-               for (let i = 0; i < numChildren; i++) {  //перебрали всі   ul  li
-                  let ulInChildren = nextchildContainer[i].querySelector('ul');
-
-                  if (ulInChildren.hidden) {
-                     ulInChildren.hidden = !ulInChildren.hidden;
-                  } else {
-                     return;
-                  }
-                  console.log(ulInChildren);
-               }
-         };
+      /*-------------------------це дрочь яка--------------------------------*/
+      // function visibleChildrenContainer() {
+      //    let nextChildContainer = childContainer.children; //дізнаємось скільки дітей в ul
+      //    let numChildren = nextChildContainer.length;
+            
+      //       for (let i = 0; i < numChildren; i++) {  //перебрали всі   ul  li
+      //          let childrenHidden = nextChildContainer[i].querySelector('ul');
+      //          !childrenHidden.hidden;
+      //          childrenHidden.style.color = "red";
+      //       }
+      // };   
          /*---------------------------------------------------------*/
+      
+      
          function endButtonHiddenAll() {
+            let childAllChildCont = target.closest('.targetForBtnClose').children;
+
             if (target.tagName == 'BUTTON' && !childContainer) {
-               if (!closeAll) return;
-               closeAll.hidden = !closeAll.hiden;
+               for (let i = 0; i < childAllChildCont.length; i++) {
+                  if (childAllChildCont[i].tagName == "UL") { 
+                     childAllChildCont[i].hidden = !childAllChildCont[i].hidden;
+                  };
+               };
             };
          };
          /*---------------------------------------------------------*/
